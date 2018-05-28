@@ -147,4 +147,6 @@ int main()
 
 		window.display();
 	}
+	cin.get();
+	cin.get();
 }
