@@ -2,6 +2,7 @@
 using namespace sf;
 
 //globals
+float delay; // make it a global now that we want to speed it up
 int num_vertBox = 30, num_horzBox = 20;
 int size = 16; //number of pixels
 int w = size * num_horzBox; //background number of pixels in width
@@ -45,6 +46,7 @@ void Tick()
 	if((s[0].x == food.x) && (s[0].y == food.y))
 	{
 		snake_length++;
+		delay -= 0.09// To slowly increase the pace of snake
 		
 		//Randomly place food somewhere else
 		food.x = rand() % num_horzBox;
@@ -82,7 +84,7 @@ int main()
 	Texture t1, t2, t3;
 	t1.loadFromFile(“image/white.png”);
 	t2.loadFromFile(“image/red.png”);
-	t3.loadFromFile(“image/green.png”);
+	t3.loadFromFile(“image/food.png”); //change of food
 	
 	//Sprite
 	//has physical dimensions
