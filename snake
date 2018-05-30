@@ -1,3 +1,5 @@
+#include <SFML\Graphics>
+#include "stdafx.h"
 #include <time.h>
 using namespace sf;
 
